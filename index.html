@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>art4you</title>
+
+    <link rel="stylesheet" href="assets/uikit/uikit.min.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+
+    <!-- Header mit Sticky Navbar für Desktop und Tablet -->
+    <header data-uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky;">
+        <nav class="uk-navbar-container uk-visible@m">
+            <div class="uk-container">
+                <div data-uk-navbar>
+                    <div class="uk-navbar-left">
+                        <div class="logo-container">
+                            <a href="#"><img src="assets/images/logo-dark.svg" alt="Logo"></a>
+                        </div>
+                    </div>
+                    <div class="uk-navbar-right">
+                        <ul class="navigation">
+                            <li><a class="navelement" href="#konzept" data-uk-scroll="offset:-50">Konzept</a></li>
+                            <li><a class="navelement" href="#galerie" data-uk-scroll="offset:30">Galerie</a></li>
+                            <li><a class="navelement" href="#anleitung" data-uk-scroll="offset:30">Anleitung</a></li>
+                            <li><a class="navelement" href="#newsletter" data-uk-scroll="offset:270">Newsletter</a></li>
+                            <li><a class="navelement" href="#kalender" data-uk-scroll="offset:30">Kalender</a></li>
+                            <li> <button class="button-nav" data-uk-toggle="target: #contact-modal"
+                                    data-uk-scrollspy="cls: uk-animation-slide-top; delay: 300;">
+                                    Kontakt
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Burger-Menü für Mobilgeräte -->
+    <header data-uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky;">
+        <nav class="nav-mobile uk-navbar-container uk-padding-remove uk-hidden@m">
+            <div class="uk-container">
+                <div data-uk-navbar>
+                    <div class="uk-navbar-left">
+                        <div class="logo-container-mobile">
+                            <a href="#"><img src="assets/images/logo-dark.svg" alt="Logo"></a>
+                        </div>
+                    </div>
+                    <div class="uk-navbar-right">
+                        <div class="uk-navbar-item">
+                            <a class="uk-navbar-toggle uk-navbar-toggle-animate" data-uk-toggle="target: #mobile-menu"
+                                data-uk-navbar-toggle-icon href="#"></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" data-uk-offcanvas="flip: true; overlay: true">
+            <div class="uk-offcanvas-bar">
+
+                <button class="uk-offcanvas-close" type="button" data-uk-close="ratio:1.5"></button>
+
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li><a class="uk-active" href="#konzept" data-uk-scroll="offset:-40">Konzept</a></li>
+                    <li><a class="uk-active" href="#galerie" data-uk-scroll="offset:20">Galerie</a></li>
+                    <li><a class="uk-active" href="#anleitung" data-uk-scroll="offset:20">Anleitung</a></li>
+                    <li><a class="uk-active" href="#newsletter" data-uk-scroll="offset:30">Newsletter</a></li>
+                    <li><a class="uk-active" href="#kalender" data-uk-scroll="offset:20">Kalender</a></li>
+                    <li><a class="uk-active" data-uk-toggle="target: #contact-modal">Kontakt</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="hero-image" data-uk-scrollspy="repeat:true">
+            <div class="uk-container uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex">
+                <div class="image-container">
+                    <img class="hero-image uk-visible@m" src="assets/images/heroimage.png" loading="lazy"
+                        alt="Abstrakte Kunst in dunkelblau und orange">
+                    <img class="hero-image uk-hidden@m" src="assets/images/heroimage-hoch.png" loading="lazy"
+                        alt="Abstrakte Kunst in dunkelblau und orange">
+                    <div class="overlay hero-text uk-visible@l">
+                        <h1 class="uk-animation-fade"
+                            data-uk-parallax="opacity: 0,1; y: -50,0; x: 130,0; scale: 1.2,1; end: 60vh + 50%; easing: ease-in-out">
+                            art4you – Deine Plattform für regionale Kunst
+                        </h1>
+                        <button class="button-hero-image uk-animation-fade" data-uk-toggle="target: #contact-modal"
+                            data-uk-parallax="opacity: 0,1; y: 50,0; scale: 0.9,1; end: 50vh + 50%;">
+                            Jetzt anfragen
+                        </button>
+                    </div>
+                    <div class="overlay hero-text uk-hidden@l uk-visible@m">
+                        <h1 class="uk-animation-fade"
+                            data-uk-parallax="opacity: 0,1; y: -40,0; x: 108,0; scale: 1.2,1; end: 40vh + 50%; easing: ease-in-out">
+                            art4you – Deine Plattform für regionale Kunst
+                        </h1>
+                        <button class="button-hero-image uk-animation-fade" data-uk-toggle="target: #contact-modal"
+                            data-uk-parallax="opacity: 0,1; y: 40,0; scale: 0.9,1; end: 30vh + 50%;">
+                            Jetzt anfragen
+                        </button>
+                    </div>
+                    <div class="overlay hero-text uk-hidden@m">
+                        <h1 class="uk-animation-fade"
+                            data-uk-parallax="opacity: 0,1; y: -30,0; x: 5,0; scale: 1,1; end: 50vh + 50%; easing: ease-in-out">
+                            art4you – Deine Plattform für regionale Kunst
+                        </h1>
+                        <button class="button-hero-image uk-animation-fade" data-uk-toggle="target: #contact-modal"
+                            data-uk-parallax="opacity: 0,1; y: 30,0; scale: 0.9,1; end: 40vh + 50%;">
+                            Jetzt anfragen
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="konzept">
+            <div class="uk-container">
+                <h2 class="headline">Konzept</h2>
+                <div class="uk-child-width-1-2@l uk-child-width-1-2@m uk-grid-large uk-grid-match" data-uk-grid>
+                    <div>
+                        <div>
+                            <img src="assets/images/team-foto.jpg" alt="Foto von dem art4you Team" class="team-foto">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-blue">
+                            <div class="icon-text-container">
+                                <div><img src="assets/images/icon1.svg" alt="Icon Farbpalette"></div>
+                                <div>
+                                    <p class="text-blue">Du bist Künstler*in, kommst aus der Rhein Main Region und
+                                        suchst
+                                        eine
+                                        Bühne für deine Werke? Wir wollen dir helfen, Fuß in der Welt der Kunst zu
+                                        fassen.
+                                    </p>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="icon-text-container">
+                                <div><img src="assets/images/icon2.svg" alt="Icon Museum"></div>
+                                <div>
+                                    <p class="text-blue">Wir haben eine Vielzahl von Kooperationen mit regionalen Museen
+                                        und
+                                        Galerien,
+                                        sodass wir für jeden Kunstschaffenden den passenden Farbtopf finden.
+                                    </p>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="icon-text-container">
+                                <div><img src="assets/images/icon3.svg" alt="Icon Vernetzung"></div>
+                                <div>
+                                    <p class="text-blue">Du findest bei uns außerdem einen Überblick über unsere
+                                        nächsten
+                                        Veranstaltungen
+                                        im <a href="#kalender" data-uk-scroll="offset:60"
+                                            class="link-orange">Kalender</a>, damit sich
+                                        Künstler*innen
+                                        gegenseitig besuchen und unterstützen
+                                        können.
+                                    </p>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="icon-text-container">
+                                <div><img src="assets/images/icon4.svg" alt="Icon Formular"></div>
+                                <div>
+                                    <p class="text-blue">Wenn du bereit für deine erste Ausstellung bist oder erstmal
+                                        ein
+                                        Feedback von uns
+                                        haben möchtest, nimm gerne Kontakt zu
+                                        uns auf. Wir freuen uns schon auf deine
+                                        Anfrage!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="bg-beige gallery">
+            <div id="galerie"></div>
+            <div class="uk-container">
+                <h2 class="headline">Galerie</h2>
+                <div class="uk-child-width-1-2 uk-child-width-1-3@m"
+                    data-uk-grid="parallax: 0; parallax-justify: true; masonry: pack">
+                    <div>
+                        <div class="flipcard">
+                            <div
+                                class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle galerieImg uk-inline-clip uk-transition-toggle front">
+
+                                <img class="uk-transition-scale-up uk-transition-opaque"
+                                    src="assets/images/luisa-wand.jpg" alt="Luisa vor weißer Wand">
+
+                            </div>
+                            <div class="back uk-card">
+                                <div class="back-card-title" data-extra-short-text="Künstlerin Luisa de Paoli">
+                                    Künstlerin
+                                    Luisa de Paoli</div>
+                                <div class="back-uk-card-text visible@m">Luisa de Paoli ist eine Wiesbadener Künstlerin
+                                    und hat sich einen Namen in der
+                                    regionalen Kunstszene gemacht.</div>
+                                <div class="back-uk-card-text uk-visible@l"> Über art4you hat sie bereits mehrfach in
+                                    verschiedenen Galerien ausgestellt.
+                                    Ihre Werke ziehen regelmäßig begeisterte Besucher an. </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div>
+                        <div class="flipcard">
+                            <div
+                                class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle uk-inline-clip uk-transition-toggle front">
+
+                                <img class="uk-transition-scale-up uk-transition-opaque" src="assets/images/muwi.jpg"
+                                    alt="Museum Wiesbaden Außenansicht">
+
+                            </div>
+                            <div class="back uk-card">
+                                <div class="back-card-title" data-extra-short-text="Museum Wiesbaden">Museum Wiesbaden
+                                </div>
+                                <div class="back-uk-card-text uk-visible@m">Das Museum Wiesbaden, Hessisches
+                                    Landesmuseum für Kunst und Natur, vereint in seiner
+                                    Sammlung Höhepunkte aus Natur- und Kunstgeschichte. Machen Sie sich auf
+                                    Entdeckungsreise zu Meisterwerken der Kunst und der Natur.</div>
+                                <div class="back-uk-card-text uk-visible@l">
+                                    Ganz im Geist seines bekanntesten Initiators, Johann Wolfgang von Goethe, verbindet
+                                    das imposante Gebäude im Zentrum der hessischen Landeshauptstadt unterschiedlichste
+                                    Abteilungen. </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div class="flipcard">
+                            <div
+                                class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle uk-inline-clip uk-transition-toggle front">
+                                <img class="uk-transition-scale-up uk-transition-opaque"
+                                    src="assets/images/laetitia-keller.jpg" alt="Laetita erklärt ihr Kunstwerk">
+                            </div>
+                            <div class="back uk-card">
+                                <div class="back-card-title" data-extra-short-text="Arthotek Kunsthaus Wiesbaden">
+                                    Artothek Kunsthaus Wiesbaden</div>
+                                <div class="back-uk-card-text uk-visible@m">Die Artothek Wiesbaden bietet die
+                                    Möglichkeit, originale Kunstwerke aus den Bereichen Malerei,
+                                    Grafik, Fotografie, Skulptur und Objektkunst gegen eine Gebühr für ein halbes Jahr
+                                    auszuleihen.</div>
+                                <div class="back-uk-card-text uk-visible@l">
+                                    Zudem besteht die Möglichkeit, die Kunstwerke in einer Bilddatenbank online zu
+                                    reservieren.
+                                    Die Bilddatenbank ermöglicht Kunstinteressierten, die Verfügbarkeit bestimmter
+                                    Kunstwerke
+                                    abzufragen und zu reservieren. </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flipcard">
+                            <div
+                                class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle uk-inline-clip uk-transition-toggle front">
+                                <img class="uk-transition-scale-up uk-transition-opaque"
+                                    src="assets/images/rheinhard-besucher.jpg" alt="Museum Rheinhard Besucher">
+                            </div>
+                            <div class="back uk-card">
+                                <div class="back-card-title"
+                                    data-extra-short-text="Neueröffnung Museum Rheinhard-Ernst">Neueröffnung Museum
+                                    Rheinhard-Ernst</div>
+                                <div class="back-uk-card-text uk-visible@m">Das Museum Reinhard Ernst zeigt Werke, die
+                                    aus der umfangreichen Kunstsammlung des Unternehmers
+                                    Reinhard Ernst stammen. Neben einem Museumsshop bietet das Museum Reinhard Ernst ein
+                                    Bistro mit Außenterrasse zur Wilhelmstraße.</div>
+                                <div class="back-uk-card-text uk-visible@l">
+                                    Seit den siebziger Jahren sammelt der Unternehmer
+                                    abstrakte Kunst.
+                                    Für die Gestaltung des Museums hat Reinhard Ernst einen der international
+                                    bedeutendsten Architekten gewinnen können: Fumihiko Maki.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flipcard">
+                            <div
+                                class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle uk-inline-clip uk-transition-toggle front">
+                                <img class="uk-transition-scale-up uk-transition-opaque"
+                                    src="assets/images/rampe-walkmühle.jpg"
+                                    alt="Blick in den Austellungsraum über die Rampe">
+                            </div>
+                            <div class="back uk-card">
+                                <div class="back-card-title" data-extra-short-text="Ausstellungsräume KV Walkmühle">
+                                    Austellungsräume KV Walkmühle</div>
+                                <div class="back-uk-card-text uk-visible@m">Die Ausstellungs- bzw. Veranstaltungsflächen
+                                    gliedern sich im Wesentlichen in fünf Räume.
+                                    Insgesamt also etwa 119 Laufmetern bespielbare Wandfläche.</div>
+                                <div class="back-uk-card-text uk-visible@l">Die Räume sind mit professionellem
+                                    Empfangs-/Bewirtungstresen
+                                    und hohen Bogenfenstern ausgestattet. Sie umfassen insgesamt 460 Quadratmeter.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flipcard">
+                            <div
+                                class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle uk-inline-clip uk-transition-toggle front">
+                                <img class="uk-transition-scale-up uk-transition-opaque"
+                                    src="assets/images/walkmühle-ausstellungsraum.jpg"
+                                    alt="Austellungsraum der Walkmühle">
+                            </div>
+                            <div class="back uk-card">
+                                <div class="back-card-title" data-extra-short-text="Künstlerverein Walkmühle">
+                                    Künstlerverein Walkmühle</div>
+                                <div class="back-uk-card-text uk-visible@m">Der Verein Kunst+Raum Wiesbaden e.V. schloss
+                                    sich mit dem Verein Walkmühle e.V. zum Künstlerverein Walkmühle zusammen.</div>
+                                <div class="back-uk-card-text uk-visible@l">
+                                    Er ist ein gemeinnütziger Verein, der die Kunst und Kultur in
+                                    der Stadt Wiesbaden fördert.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flipcard">
+                            <div
+                                class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle uk-inline-clip uk-transition-toggle front">
+                                <img class="uk-transition-scale-up uk-transition-opaque"
+                                    src="assets/images/close-up.jpg" alt="Nahaufnahme eines Kunstwerks">
+                            </div>
+                            <div class="back uk-card">
+                                <div class="back-card-title" data-extra-short-text="Nahaufnahme eines Kunstpbjekts">
+                                    Nahaufnahme eines Kunstobjekts</div>
+                                <div class="back-uk-card-text uk-visible@m">Dies ist eine Arbeit des rheingauer
+                                    Künstlers Hans Joachim de Paoli. Er hat in diesem Jahr seine Kunst mit uns geteilt.
+                                </div>
+                                <div class="back-uk-card-text uk-visible@l">Das Kunstobjekt zeigt großflächig
+                                    verschiedenfarbige Farbflächen, die in der Mitte
+                                    zusammenlaufen.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flipcard">
+                            <div
+                                class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle uk-inline-clip uk-transition-toggle front">
+                                <img class="uk-transition-scale-up uk-transition-opaque"
+                                    src="assets/images/kunsthaus-galerie.jpg" alt="Kunstgalerie">
+                            </div>
+                            <div class="back uk-card">
+                                <div class="back-card-title" data-extra-short-text="Kunsthaus Wiesbaden">Kunsthaus
+                                    Wiesbaden</div>
+                                <div class="back-uk-card-text uk-visible@m">Das Kunsthaus ist eine Begegnungsstätte für
+                                    Kulturinteressierte und Künstler.</div>
+                                <div class="back-uk-card-text uk-visible@l">
+                                    Seit 1988 befindet sich das Gebäude in der Verwaltung der
+                                    Landeshauptstadt Wiesbaden.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+
+                        <div class="flipcard">
+                            <div
+                                class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle uk-inline-clip uk-transition-toggle front">
+                                <img class="uk-transition-scale-up uk-transition-opaque"
+                                    src="assets/images/melanie-kunsthaus.jpg" alt="Melanie erklärend im Kunsthaus">
+                            </div>
+                            <div class="back uk-card">
+                                <div class="back-card-title" data-extra-short-text="Kuratorin Melanie Kaiser">Kuratorin
+                                    Melanie Kaiser</div>
+                                <div class="back-uk-card-text uk-visible@m">Die Kuratorin Melanie Kaiser arbeitet in
+                                    einer renommierten Galerie und kooperiert regelmäßig mit der art4you.</div>
+                                <div class="back-uk-card-text uk-visible@l">
+                                    Durch diese Zusammenarbeit bringt sie frische, spannende Künstler in ihre
+                                    Ausstellungen.</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <div id="anleitung" data-uk-grid></div>
+            <div class="uk-container" data-uk-scrollspy="cls: uk-animation-fade; target: li; delay: 500; repeat: false">
+                <h2 class="headline">Anleitung</h2>
+                <ul class="leitfaden">
+                    <li class=" uk-card-body">
+                        <div class="freeform">
+                            <img src="assets/images/icon1.svg" alt="Icon Farbpalette">
+                        </div>
+                        <p class="text-blue">
+                            <span class="leitfaden-steps">Step 1</span> Triff eine Auswahl an
+                            Kunstwerken,
+                            die
+                            du ausstellen möchtest. Am besten
+                            wählst
+                            du
+                            mindestens fünf Objekte bis maximal zehn. Sende uns anschließend eine Anfrage über unser
+                            Formular.
+                        </p>
+                    </li>
+                    <li class="uk-card-body">
+                        <div class="freeform">
+                            <img src="assets/images/icon2.svg" alt="Icon Museum">
+                        </div>
+
+                        <p class="text-blue"> <span class="leitfaden-steps">Step 2</span> Wir melden uns
+                            schnellstmöglich
+                            bei dir und nehmen Kontakt zu dir auf, um
+                            die
+                            nächsten Schritte zu besprechen und eine passende Location für deine Kunst zu finden.</p>
+                    </li>
+                    <li class=" uk-card-body">
+                        <div class="freeform">
+                            <img src="assets/images/icon6.svg" alt="Icon Zielflagge">
+                        </div>
+                        <p class="text-blue"> <span class="leitfaden-steps">Step 3</span> Wenn wir eine Location und
+                            einen Termin gefunden haben, der für dich passt,
+                            gehen
+                            wir in die Umsetzung deiner Ausstellung. Das wird dein Moment, bei dem wir dich tatkräftig
+                            unterstützen werden!</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="bg-beige">
+            <div class="uk-container">
+                <div id="newsletter"></div>
+                <div class="newsletter-text uk-container">
+                    <h2 class="headline-blue">Newsletteranmeldung</h2>
+
+                    <p class="text-blue">Verpasse nicht den nächsten Termin, deiner Ausstellung eine Bühne zu bieten!
+                    </p>
+                    <form>
+                        <label for="email"></label>
+                        <input type="email" id="email" name="email" placeholder="Email-Adresse" class="formular-input"
+                            required>
+                        <button type="submit" class="button-anmeldung">Jetzt anmelden</button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <section>
+            <div id="kalender"></div>
+            <div class="uk-container">
+                <h2 class="headline">Kalender</h2>
+                <div class="uk-child-width-1-2@m uk-grid-small uk-grid-match" data-uk-grid>
+                    <div>
+                        <ul data-uk-accordion>
+                            <li class="akkordeon">
+                                <a class="uk-accordion-title" href="#">
+                                    <p class="kalender-titel">26 Apr 2024 — 25 Aug 2024</p>
+                                    <h3 class="kalender-titel-zwei">Retrospektive</h3>
+                                </a>
+                                <div class="uk-accordion-content akkordeon-content">
+                                    <div class="kalender-item"><img src="assets/images/icon5.svg" alt="Icon Standort">
+                                        <p>Standort: Museum Wiesbaden</p>
+                                    </div>
+                                    <div class="kalender-item"><img src="assets/images/icon7.svg"
+                                            alt="Icon Farbpalette">
+                                        <p>Künstler: Günter Fruhtrunk</p>
+                                    </div>
+                                    <div class="kalender-item"><img src="assets/images/icon8.svg" alt="Icon Pinsel">
+                                        <p>Kunststil: Abstrakte Kunst</p>
+                                    </div>
+                                    <p>
+                                        Anlässlich des 100. Geburtstages von Günter Fruhtrunk widmen das Kunstmuseum
+                                        Bonn und das Museum Wiesbaden dem Künstler eine große Retrospektive.
+                                        Nach der ersten Station 2023 in Bonn wird die Ausstellung ab April 2024 in
+                                        Wiesbaden zu sehen sein.
+                                        Fruhtrunk revolutionierte die abstrakte Nachkriegsmalerei in einer Weise, die
+                                        bis heute ihresgleichen sucht.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="akkordeon">
+                                <a class="uk-accordion-title" href="#">
+                                    <p class="kalender-titel">23 Aug 2024 - 10 Sep 2024</p>
+                                    <h3 class="kalender-titel-zwei">Zwischen Wurzel und Wipfel</h3>
+                                </a>
+                                <div class="uk-accordion-content akkordeon-content">
+                                    <div class="kalender-item"><img src="assets/images/icon5.svg" alt="Icon Standort">
+                                        <p class="kalender-untertitel">Standort: Künstlerverein Walkmühle</p>
+                                    </div>
+                                    <div class="kalender-item"><img src="assets/images/icon7.svg"
+                                            alt="Icon Farbpalette">
+                                        <p>Künstler: International besetzte Gruppenausstellung </p>
+                                    </div>
+                                    <div class="kalender-item"><img src="assets/images/icon8.svg" alt="Icon Pinsel">
+                                        <p>Kunststil: Verschiedenes</p>
+                                    </div>
+                                    <p>
+                                        International besetzte Gruppenausstellung zum Themenschwerpunk Wald.
+                                        Kuratiert von Christiane Erdmann und Verena Schmidt.
+                                        Vernissage am Freitag, 23. August um 18 Uhr.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="akkordeon">
+                                <a class="uk-accordion-title" href="#">
+                                    <p class="kalender-titel">25 Aug 2024 - 12 Jan 2025</p>
+                                    <h3 class="kalender-titel-zwei">Vergängliche Momente</h3>
+                                </a>
+                                <div class="uk-accordion-content akkordeon-content">
+                                    <div class="kalender-item"><img src="assets/images/icon5.svg" alt="Icon Standort">
+                                        <p>Standort: Kunsthaus Wiesbaden</p>
+                                    </div>
+                                    <div class="kalender-item"><img src="assets/images/icon7.svg"
+                                            alt="Icon Farbpalette">
+                                        <p>Künstler: Stefan Hofer, Elena Petrovic</p>
+                                    </div>
+                                    <div class="kalender-item"><img src="assets/images/icon8.svg" alt="Icon Pinsel">
+                                        <p>Kunststil: Moderne Kunst, Fotografie</p>
+                                    </div>
+                                    <p>
+                                        Vergängliche Momente fängt die Flüchtigkeit der Zeit in verschiedenen Medien
+                                        ein.
+                                        Stefan Hofers Fotografie und Elena Petrovics Gemälde laden dazu ein,
+                                        über die flüchtigen Augenblicke des Lebens nachzudenken und die Schönheit des
+                                        Vergänglichen zu schätzen.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="akkordeon">
+                                <a class="uk-accordion-title" href="#">
+                                    <p class="kalender-titel">8 Sep 2024 - 15 Dez 2024</p>
+                                    <h3 class="kalender-titel-zwei">Formen der Ewigkeit</h3>
+                                </a>
+                                <div class="uk-accordion-content akkordeon-content">
+                                    <div class="kalender-item"><img src="assets/images/icon5.svg" alt="Icon Standort">
+                                        <p>Standort: Museum Wiesbaden</p>
+                                    </div>
+                                    <div class="kalender-item"><img src="assets/images/icon7.svg"
+                                            alt="Icon Farbpalette">
+                                        <p>Künstler: Franziska Lange</p>
+                                    </div>
+                                    <div class="kalender-item"><img src="assets/images/icon8.svg" alt="Icon Pinsel">
+                                        <p>Kunststil: Skulpturen</p>
+                                    </div>
+                                    <p>
+                                        "Formen der Ewigkeit" widmet sich der zeitlosen Kunst der Skulptur.
+                                        Franziska Langes filigrane Bronze-Arbeiten und monumentale Marmorskulpturen
+                                        erforschen die Vielfalt und Beständigkeit dieser klassischen Kunstform.
+                                        Die Ausstellung lädt die Besucher ein, die materielle und symbolische
+                                        Dauerhaftigkeit von Skulpturen zu erleben und zu würdigen
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <iframe class="map"
+                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14483.024546985389!2d8.22641585071478!3d50.081396008419325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smuseum!5e0!3m2!1sde!2sde!4v1720012781351!5m2!1sde!2sde"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="kontakt" class="bg-blue footer">
+        <div class="uk-container">
+            <div class="uk-child-width-expand@s" data-uk-grid>
+                <div class="footer-left">
+                    <img src="assets/images/logo-light.svg" alt="Logo" class="logo-footer">
+                    <ul class="footer-liste uk-visible@m">
+                        <li><a href="#" class="footer-links">Datenschutzbestimmungen</a></li>
+                        <li><a href="#" class="footer-links">Impressum</a></li>
+                        <li><a href="#" class="footer-links">Cookie-Einstellungen</a></li>
+                        <li><a href="#" class="footer-links">Newsletter</a></li>
+                    </ul>
+                    <div class="desktop-rechte uk-visible@m uk-margin-small-top">
+                        <p>&copy; 2024 art4you. Alle Rechte vorbehalten.</p>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <p>
+                        art4you
+                        <br>
+                        <a href="#" onclick="openMaps()" class="footer-links">Gerichtsstraße 4<br>65185 Wiesbaden</a>
+                    </p>
+                    <hr class="footer-divider">
+                    <p class="abstand-footer-mobil">
+                        Telefonnummer: <a href="tel:0611824790" class="footer-links">0611 824790</a>
+                        <br>
+                        Telefax: <a href="tel:0611824791" class="footer-links">0611 824791</a>
+                        <br>
+                        E-Mail: <a href="mailto:art4you@gmx.de" class="footer-links">art4you@gmx.de</a>
+                    </p>
+
+                    <ul class="uk-iconnav uk-text-right">
+                        <li><a href="https://www.instagram.com" target="_blank" class="uk-margin-small-right"
+                                data-uk-icon="icon: instagram; ratio: 2 "></a></li>
+                        <li><a href="https://www.facebook.com" target="_blank" class="uk-margin-small-right"
+                                data-uk-icon="icon: facebook; ratio: 2"></a></li>
+                        <li><a href="https://www.youtube.com" target="_blank" class="uk-margin-small-right"
+                                data-uk-icon="icon: youtube; ratio: 2"></a></li>
+                        <li><a href="https://www.pinterest.com" target="_blank"
+                                data-uk-icon="icon: pinterest; ratio: 2"></a></li>
+                    </ul>
+
+                    <ul class="footer-liste uk-hidden@m uk-margin-medium-top">
+                        <li><a href="#" class="footer-links">Datenschutzbestimmungen</a></li>
+                        <li><a href="#" class="footer-links">Impressum</a></li>
+                        <li><a href="#" class="footer-links">Cookie-Einstellungen</a></li>
+                        <li><a href="#" class="footer-links">Newsletter</a></li>
+                    </ul>
+                    <div class="mobil-rechte uk-hidden@m uk-margin-top">
+                        <p>&copy; 2024 art4you. Alle Rechte vorbehalten.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact-modal" data-uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+                <button class="uk-modal-close-default" type="button" data-uk-close></button>
+                <h2 class="uk-modal-title">Kontaktformular</h2>
+                <form>
+                    <div class="uk-margin">
+                        <div class="uk-grid-small" data-uk-grid>
+                            <div class="uk-width-1-4@s">
+                                <select class="uk-select formular-text-input" required>
+                                    <option value="">Anrede</option>
+                                    <option value="Herr">Herr</option>
+                                    <option value="Frau">Frau</option>
+                                    <option value="Divers">Keine Angabe</option>
+                                </select>
+                            </div>
+                            <div class="uk-width-3-4@s">
+                                <input class="uk-input formular-input" type="text" placeholder="Name" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-grid-small" data-uk-grid>
+                            <div class="uk-width-1-2@s">
+                                <input class="uk-input formular-input" type="email" placeholder="Email" required>
+                            </div>
+                            <div class="uk-width-1-2@s">
+                                <input class="uk-input formular-input" type="tel" placeholder="Telefonnummer" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-grid-small" data-uk-grid>
+                            <div class="uk-width-1-1@s">
+                                <select class="uk-select formular-text-input" required>
+                                    <option value="">Bitte Ausstellungsort auswählen</option>
+                                    <option value="Option1">Kunsthaus Wiesbaden</option>
+                                    <option value="Option2">Walkmühle</option>
+                                    <option value="Option3">Museum Wiesbaden</option>
+                                    <option value="Option4">Museum Rheinhard</option>
+                                    <option value="Option5">Keine Präferenz</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <textarea class="uk-textarea formular-input" rows="5" placeholder="Nachricht"
+                            required></textarea>
+                    </div>
+                    <div class="uk-margin uk-grid-small uk-flex-middle" data-uk-grid>
+                        <div class="uk-width-auto">
+                            <label><input class="uk-checkbox checkbox-text" type="checkbox" required> Ich akzeptiere die
+                                <a href="#" class="footer-links">Datenschutzbestimmungen</a>.</label>
+                        </div>
+                        <div class="uk-width-expand">
+                            <button class="uk-button uk-button-primary button-kontakt" type="submit">Senden</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <img id="konamiGif" src="assets/images/congratulations-7600_256.gif" alt="Konami GIF Konfetti">
+
+    <script src="assets/uikit/uikit.min.js"></script>
+    <script src="assets/uikit/uikit-icons.min.js"></script>
+    <script src="assets/scripts.js"></script>
+</body>
+
+</html>
